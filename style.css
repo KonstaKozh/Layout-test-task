@@ -35,23 +35,157 @@ html,
 body{
    height: 100%;
    line-height: 1;
-   font-size: 14px;
    background-color: #fff;
-   font-family: OpenSans, sans-serif;
-
+   font-family: 'Open Sans', sans-serif;
+   font-style: normal;
+   font-size: 14px;
+   font-weight: 400;
+   color: #4B4B4B;
 }
 /*--------------------*/
 
 ._container {
    max-width: 341px;
+   margin: 0 auto;
 }
 
-.__title {
+._title {
 
 }
-.__text {
+._text {
 
 }
 *:last-child {
    margin-bottom: 0;
+}
+
+.cards {
+   margin: 27px 18px 27px 16px;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+
+.card__container {
+   border: 0.3px solid #E5E5E5;
+   border-radius: 16px;
+   position: relative;
+   box-sizing: border-box;
+
+}
+.card__image {
+   margin: 0 0 14px 0;
+}
+.card__image img {
+   border-radius: 16px 16px 0 0;
+}
+.card__new {
+   position: absolute;
+   content: '';
+   top: 41px;
+   left: -1px;
+   padding: 8px 17px;
+   background-color: #FED74B;
+   font-size: 12px;
+   font-weight: 600;
+   line-height: 20px;
+   color: #3E3E3E;
+   text-transform: capitalize;
+   z-index: 100;
+}
+
+.card__duration {
+   display: flex;
+   align-items: center;
+   margin: 0 0 15px 0;
+   padding: 0 12px;
+}
+.card__duration img {
+   margin: 0 9px 0 0;
+   height: 16px;
+   width: 16px;
+}
+
+.duration__text {
+   font-size: 12px;
+   line-height: 20px;
+   color: #9E9E9E;
+}
+
+.card__title {
+   margin: 0 0 18px 0;
+   padding: 0 12px;
+   font-weight: 600;
+   line-height: 22px;
+   color: #404040;
+}
+
+.card-list {
+   margin: 0 0 18px 0;
+   padding: 0 12px;
+}
+
+.card-list__item {
+   display: flex;
+   align-items: flex-start;
+   padding: 5px 0;
+}
+.card-list__item img {
+   margin: 0 20px 0 0;
+   padding: 5px 0 0 0;
+}
+.card-list__text {
+   line-height: 20px;
+}
+
+.card__times {
+   display: flex;
+   gap: 10px;
+   margin: 0 0 35px 0;
+   padding: 0 12px 0 45px;
+}
+
+.card__time {
+   padding: 2px 12px;
+   background: #D9E8FF;
+   border-radius: 11px;
+   color: #343434;
+   line-height: 20px;
+}
+
+.card__footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 50px;
+   padding: 0 12px ;
+   margin-bottom: 19px;
+}
+
+.card__price {
+   line-height: 20px;
+   color: #000000;
+}
+
+.price {
+   font-size: 30px;
+}
+.price span {
+   margin-left: 8px;
+   font-size: 29px;
+}
+
+.price-option {
+   font-size: 10px;
+}
+
+.card__btn {
+   padding: 12px 40px;
+   max-width: 165px;
+   background: #FED74B;
+   border: 0.5px solid #CBA500;
+   border-radius: 20px;
+   font-size: 14px;
+   line-height: 20px;
+   color: #404040;
 }
