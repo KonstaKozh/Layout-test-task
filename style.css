@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap@subset=cyrillic-ext');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
 
 *,
 *::before,
@@ -34,7 +34,7 @@ h6 {
 html,
 body{
    height: 100%;
-   line-height: 1;
+   line-height: 20px;
    background-color: #fff;
    font-family: 'Open Sans', sans-serif;
    font-style: normal;
@@ -49,12 +49,6 @@ body{
    margin: 0 auto;
 }
 
-._title {
-
-}
-._text {
-
-}
 *:last-child {
    margin-bottom: 0;
 }
@@ -77,11 +71,8 @@ body{
    margin: 0 0 14px 0;
 }
 .card-img {
-   height: 220px;
-   background-image: url(img/sankt-peterburg-piter-st-3495.png);
-   background-position: top center;
-   background-size: cover;
    border-radius: 16px 16px 0 0;
+   width: 100%;
 }
 .card-img_theme_s {
    height: 220px;
@@ -89,6 +80,7 @@ body{
 .card-img_theme_m {
    height: 284px;
 }
+
 .card__new {
    position: absolute;
    content: '';
@@ -124,7 +116,6 @@ body{
    height: 16px;
    width: 16px;
 }
-
 .duration__text {
    font-size: 12px;
    line-height: 20px;
@@ -143,7 +134,6 @@ body{
    margin: 0 0 18px 0;
    padding: 0 12px;
 }
-
 .card-list__item {
    display: flex;
    align-items: flex-start;
@@ -208,15 +198,106 @@ body{
    color: #404040;
 }
 .card__btn_theme_s {
-   /*max-width: 165px;*/
    padding: 11px 50px;
    max-width: 165px;
    border-radius: 20px;
    font-weight: 400;
 }
 .card__btn_theme_m {
-   /*max-width: 193px;*/
    padding: 11px 54px;
    border-radius: 10px;
    font-weight: 600;
+}
+
+/*================================================*/
+
+@media screen and (min-width: 1070px) {
+   ._container {
+      max-width: 1070px;
+   }
+   .card__container {
+      display: flex;
+      flex-direction: row;
+      border: 2px solid #E5E5E5;
+   }
+   .card__image {
+      margin: 0;
+   }
+   .card-img {
+      min-width: 473px;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px 0px 0px 16px;
+   }
+   .card__content {
+      display: flex;
+      flex-direction: column;
+      padding: 16px 17px 16px 23px;
+   }
+   .card__title {
+      margin-bottom: 8px;
+      padding: 0;
+      order:-1;
+      font-size: 26px;
+      font-weight: 400;
+      line-height: 34px;
+      color: #000000;
+   }
+   .card__title span {
+      display: none;
+   }
+   .card__duration {
+      padding: 0;
+      margin-bottom: 8px;
+   }
+   .duration__text {
+      font-size: 14px;
+   }
+   .card-list {
+      padding: 0;
+   }
+   .card-list__item {
+      margin-bottom: 3px;
+   }
+   .card-list__item img {
+      margin-right: 15px;
+   }
+   .card-list__text {
+      font-size: 18px;
+   }
+   .card-list__item:last-child {
+   }
+   .card__time {
+      padding: 4px 16px;
+      background: #C5DCFF;
+      font-size: 16px;
+   }
+   .card__time:active {
+      background: #6BA6FF;
+      font-size: 16px;
+      color: #FFFFFF;
+   }
+   .price,
+   .price span {
+      font-size: 36px;
+   }
+   .price-option {
+      max-width: 130px;
+      line-height: 20px;
+      font-size: 14px;
+   }
+   .card__footer {
+      padding-left: 0;
+      justify-content: left;
+      align-items: start;
+   }
+   .card__price {
+      margin-right: 13px;
+   }
+   .card__btn {
+      max-width: 200px;
+      padding: 15px 40px;
+      font-size: 18px;
+      border-radius: 23px;
+   }
 }
