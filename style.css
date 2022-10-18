@@ -67,7 +67,7 @@ body{
 }
 
 .card__container {
-   border: 0.3px solid #E5E5E5;
+   border: 1px solid #E5E5E5;
    border-radius: 16px;
    position: relative;
    box-sizing: border-box;
@@ -76,24 +76,43 @@ body{
 .card__image {
    margin: 0 0 14px 0;
 }
-.card__image img {
+.card-img {
+   height: 220px;
+   background-image: url(img/sankt-peterburg-piter-st-3495.png);
+   background-position: top center;
+   background-size: cover;
    border-radius: 16px 16px 0 0;
+}
+.card-img_theme_s {
+   height: 220px;
+}
+.card-img_theme_m {
+   height: 284px;
 }
 .card__new {
    position: absolute;
    content: '';
+   font-weight: 600;
+   line-height: 20px;
+   text-transform: capitalize;
+   z-index: 100;
+}
+.card__new_theme_s {
    top: 41px;
    left: -1px;
    padding: 8px 17px;
    background-color: #FED74B;
    font-size: 12px;
-   font-weight: 600;
-   line-height: 20px;
    color: #3E3E3E;
-   text-transform: capitalize;
-   z-index: 100;
 }
-
+.card__new_theme_m {
+   top: 0;
+   padding: 12px 29px;
+   border-radius: 15px 0 12px;
+   background-color: #7553FF;
+   color: #FFFFFF;
+   font-size: 14px;
+}
 .card__duration {
    display: flex;
    align-items: center;
@@ -140,13 +159,13 @@ body{
 
 .card__times {
    display: flex;
-   gap: 10px;
+   gap: 8px;
    margin: 0 0 35px 0;
-   padding: 0 12px 0 45px;
+   padding: 0 19px 0 45px;
 }
 
 .card__time {
-   padding: 2px 12px;
+   padding: 3px 14px;
    background: #D9E8FF;
    border-radius: 11px;
    color: #343434;
@@ -155,20 +174,19 @@ body{
 
 .card__footer {
    display: flex;
-   justify-content: center;
+   justify-content: space-between;
    align-items: center;
-   gap: 50px;
-   padding: 0 12px ;
+   padding: 0 19px ;
    margin-bottom: 19px;
 }
 
 .card__price {
-   line-height: 20px;
    color: #000000;
 }
 
 .price {
    font-size: 30px;
+   line-height: 20px;
 }
 .price span {
    margin-left: 8px;
@@ -176,16 +194,29 @@ body{
 }
 
 .price-option {
+   margin-top: 10px;
    font-size: 10px;
+   font-weight: 400;
+   line-height: 11px;
 }
 
 .card__btn {
-   padding: 12px 40px;
-   max-width: 165px;
    background: #FED74B;
-   border: 0.5px solid #CBA500;
-   border-radius: 20px;
+   border: 1px solid #CBA500;
    font-size: 14px;
    line-height: 20px;
    color: #404040;
+}
+.card__btn_theme_s {
+   /*max-width: 165px;*/
+   padding: 11px 50px;
+   max-width: 165px;
+   border-radius: 20px;
+   font-weight: 400;
+}
+.card__btn_theme_m {
+   /*max-width: 193px;*/
+   padding: 11px 54px;
+   border-radius: 10px;
+   font-weight: 600;
 }
