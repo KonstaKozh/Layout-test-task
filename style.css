@@ -139,6 +139,10 @@ body{
    align-items: flex-start;
    padding: 5px 0;
 }
+.card-list__item:last-child {
+   flex-wrap: wrap;
+   margin-bottom: 30px;
+}
 .card-list__item img {
    margin: 0 20px 0 0;
    padding: 5px 0 0 0;
@@ -148,14 +152,12 @@ body{
 }
 
 .card__times {
+   margin-top: 8px;
    display: flex;
-   gap: 8px;
-   margin: 0 0 35px 0;
-   padding: 0 19px 0 45px;
+   gap: 7px;
 }
-
 .card__time {
-   padding: 3px 14px;
+   padding: 3px 13px;
    background: #D9E8FF;
    border-radius: 11px;
    color: #343434;
@@ -213,7 +215,7 @@ body{
 
 @media screen and (min-width: 1070px) {
    ._container {
-      max-width: 1070px;
+      max-width: 1106px;
    }
    .card__container {
       display: flex;
@@ -228,6 +230,12 @@ body{
       height: 100%;
       object-fit: cover;
       border-radius: 16px 0px 0px 16px;
+   }
+   .card__new {
+      top: 59px;
+      padding: 12px 33px;
+      font-weight: 600;
+      font-size: 16px;
    }
    .card__content {
       display: flex;
@@ -259,13 +267,22 @@ body{
    .card-list__item {
       margin-bottom: 3px;
    }
+   .card-list__item:last-child {
+      flex-wrap: nowrap;
+       margin-bottom: 5px;
+   }
    .card-list__item img {
       margin-right: 15px;
    }
    .card-list__text {
       font-size: 18px;
    }
-   .card-list__item:last-child {
+   .card-list__text:last-child {
+      display: flex;
+      flex-wrap: nowrap;
+   }
+   .card__times {
+      margin: 0 0 0 8px;
    }
    .card__time {
       padding: 4px 16px;
@@ -299,5 +316,6 @@ body{
       padding: 15px 40px;
       font-size: 18px;
       border-radius: 23px;
+      border-style: none;
    }
 }
