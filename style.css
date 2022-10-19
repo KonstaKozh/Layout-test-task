@@ -105,7 +105,7 @@ body{
    color: #FFFFFF;
    font-size: 14px;
 }
-.card__new_visible {
+.card__new_visibility {
    visibility: hidden;
 }
 .card__duration {
