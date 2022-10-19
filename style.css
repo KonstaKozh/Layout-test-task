@@ -160,6 +160,7 @@ body{
    gap: 7px;
 }
 .card__time {
+   max-width: 74px;
    padding: 3px 13px;
    background: #D9E8FF;
    border-radius: 11px;
@@ -172,6 +173,9 @@ summary {
 }
 details summary::marker {
    display: none;
+}
+.wrapper-card__time .card__time {
+   margin-left: -14px;
 }
 details[open] > summary{
    padding: 0;
