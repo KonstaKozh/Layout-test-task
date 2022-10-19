@@ -33,7 +33,6 @@ h6 {
 
 html,
 body{
-   height: 100%;
    line-height: 20px;
    background-color: #fff;
    font-family: 'Open Sans', sans-serif;
@@ -60,7 +59,7 @@ body{
    gap: 30px;
 }
 
-.card__container {
+.card {
    border: 1px solid #E5E5E5;
    border-radius: 16px;
    position: relative;
@@ -143,7 +142,7 @@ body{
    padding: 5px 0;
 }
 .card-list__item:last-child {
-   flex-wrap: wrap;
+   flex-wrap: nowrap;
    margin-bottom: 30px;
 }
 .card-list__item img {
@@ -158,6 +157,7 @@ body{
    margin-top: 8px;
    display: flex;
    gap: 7px;
+   flex-wrap: wrap;
 }
 .card__time {
    max-width: 74px;
@@ -235,7 +235,7 @@ details[open] > summary{
    ._container {
       max-width: 1106px;
    }
-   .card__container {
+   .card {
       display: flex;
       flex-direction: row;
       border: 2px solid #E5E5E5;
