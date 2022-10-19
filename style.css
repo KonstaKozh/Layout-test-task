@@ -167,13 +167,10 @@ body{
    color: #343434;
    line-height: 20px;
 }
-summary {
-   display: block;
-   position: relative;
-}
-details summary::marker {
+.hidden__time {
    display: none;
 }
+
 .wrapper-card__time .card__time {
    margin-left: -14px;
 }
