@@ -105,6 +105,9 @@ body{
    color: #FFFFFF;
    font-size: 14px;
 }
+.card__new_visible {
+   visibility: hidden;
+}
 .card__duration {
    display: flex;
    align-items: center;
@@ -162,6 +165,17 @@ body{
    border-radius: 11px;
    color: #343434;
    line-height: 20px;
+}
+summary {
+   display: block;
+   position: relative;
+}
+details summary::marker {
+   display: none;
+}
+details[open] > summary{
+   padding: 0;
+   margin: 0;
 }
 
 .card__footer {
@@ -229,11 +243,12 @@ body{
       min-width: 473px;
       height: 100%;
       object-fit: cover;
-      border-radius: 16px 0px 0px 16px;
+      border-radius: 16px 0 0 16px;
    }
    .card__new {
       top: 59px;
       padding: 12px 33px;
+      border-radius: 0;
       font-weight: 600;
       font-size: 16px;
    }
@@ -265,7 +280,7 @@ body{
       padding: 0;
    }
    .card-list__item {
-      margin-bottom: 3px;
+      margin: 0 0 7px 0;
    }
    .card-list__item:last-child {
       flex-wrap: nowrap;
@@ -278,22 +293,25 @@ body{
       font-size: 18px;
    }
    .card-list__text:last-child {
+      height: 28px;
       display: flex;
       flex-wrap: nowrap;
+      white-space: nowrap;
    }
    .card__times {
-      margin: 0 0 0 8px;
+      margin: 0 0 0 10px;
    }
    .card__time {
       padding: 4px 16px;
       background: #C5DCFF;
       font-size: 16px;
    }
-   .card__time:active {
+   .card__time:focus {
       background: #6BA6FF;
-      font-size: 16px;
+      /*font-size: 16px;*/
       color: #FFFFFF;
    }
+
    .price,
    .price span {
       font-size: 36px;
@@ -304,6 +322,7 @@ body{
       font-size: 14px;
    }
    .card__footer {
+      margin-bottom: 0;
       padding-left: 0;
       justify-content: left;
       align-items: start;
