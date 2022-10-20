@@ -10,7 +10,7 @@ cardTimes.forEach(function (item, i) {
         cardTime.forEach(function (time, n){
             // console.log(time)
             if (n > 2) {
-                time.className = 'hidden__time'
+                time.classList.add('hidden__time')
             }
         })
     }
@@ -18,13 +18,14 @@ cardTimes.forEach(function (item, i) {
 function showTime() {
     const hiddenTime = document.querySelectorAll('.hidden__time')
     console.log(hiddenTime)
-    if (hiddenTime.length === 0) {
-        hiddenTime.forEach(function (item,i) {
-            item.className = 'hidden__time'
-        })
-    } else {
-        hiddenTime.forEach(function (item, i) {
-            item.className = 'card__time'
-        })
-    }
+
+    // if (hiddenTime.length === 0) {
+    //     hiddenTime.forEach(function (item,i) {
+    //         item.className = 'hidden__time'
+    //     })
+    // } else {
+    //     hiddenTime.forEach(function (item, i) {
+    //         item.className = 'card__time'
+    //     })
+    // }
 }
