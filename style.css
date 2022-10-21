@@ -159,6 +159,7 @@ body{
    gap: 7px;
    flex-wrap: wrap;
 }
+
 .card__time {
    max-width: 74px;
    padding: 3px 13px;
@@ -174,11 +175,6 @@ body{
 .wrapper-card__time .card__time {
    margin-left: -14px;
 }
-details[open] > summary{
-   padding: 0;
-   margin: 0;
-}
-
 .card__footer {
    display: flex;
    justify-content: space-between;
@@ -295,7 +291,6 @@ details[open] > summary{
       font-size: 18px;
    }
    .card-list__text:last-child {
-      height: 28px;
       display: flex;
       flex-wrap: nowrap;
       white-space: nowrap;
@@ -311,6 +306,13 @@ details[open] > summary{
    }
    .card__time:focus {
       background: #6BA6FF;
+      color: #FFFFFF;
+   }
+   .card__times button {
+      cursor: pointer;
+   }
+   .card__times button:hover {
+      background-color: #7553FF;
       color: #FFFFFF;
    }
 
@@ -344,5 +346,10 @@ details[open] > summary{
       font-size: 18px;
       border-radius: 23px;
       border-style: none;
+      cursor: pointer;
+   }
+   .card__btn:hover {
+      background-color: #7553FF;
+      color: #FFFFFF;
    }
 }
