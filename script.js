@@ -1,6 +1,6 @@
 const cardTimes = document.querySelectorAll('.card__times')
 
-cardTimes.forEach(function (item, i) {
+cardTimes.forEach(function (item) {
     const numberTimes = item.querySelectorAll('.card__time').length
     const cardTime = item.querySelectorAll('.card__time')
     if (numberTimes > 4) {
@@ -13,13 +13,13 @@ cardTimes.forEach(function (item, i) {
     }
 })
 
-const cards = document.querySelectorAll('.card')
-cards.forEach(function (card, i) {
-    card.addEventListener("click", showTime)
+const btnTime = document.querySelectorAll('.card__times > button')
+btnTime.forEach(function (btn) {
+    btn.addEventListener("click", showTime)
 })
 
 function showTime(event) {
-    const additionallyTimes = event.currentTarget.querySelectorAll('.add_time')
+    const additionallyTimes = event.currentTarget.parentNode.querySelectorAll('.add_time')
     additionallyTimes.forEach(function (item) {
         item.classList.toggle('hidden__time');
     })
