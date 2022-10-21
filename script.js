@@ -1,5 +1,4 @@
 const cardTimes = document.querySelectorAll('.card__times')
-
 cardTimes.forEach(function (item) {
     const numberTimes = item.querySelectorAll('.card__time').length
     const cardTime = item.querySelectorAll('.card__time')
@@ -24,3 +23,11 @@ function showTime(event) {
         item.classList.toggle('hidden__time');
     })
 }
+
+const cardFooters = document.querySelectorAll('.card__footer')
+cardFooters.forEach(function (cardFooter) {
+    console.log(cardFooter.querySelector('.price-option'))
+    if (!cardFooter.querySelector('.price-option')) {
+        cardFooter.classList.add('price_center')
+    }
+})
